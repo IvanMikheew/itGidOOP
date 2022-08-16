@@ -34,6 +34,9 @@ const cpu = {
     'family': 'AMD Ryzen 7',
     'name': 'Ryzen 7 3700X',
     'image': '',
+    'sale': function(p) {
+        return this.amount - this.amount * (p/100);
+    },
 }
 
 let memory = {
