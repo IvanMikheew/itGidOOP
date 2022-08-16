@@ -5,11 +5,6 @@
 // добавьте в него свойство семейство (family) равное например AMD Ryzen 7
 // добавьте в него название (name) например Ryzen 7 3700X
 
-const cpu = {
-
-}
-huy
-
 //Task 2
 // Создайте наследника объекта cpu и назовите его memory (через proto).Да, мы будем строить магазин, который торгует и памятью.Поскольку мы наследуемся от cpu то все свойства останутся.
 // Заполним объект memory.
@@ -32,3 +27,27 @@ huy
 
 // Task 5. 
 // Добавьте для cpu метод sale(p) - который возвращает стоимость amount товара с учетом скидки p. Скидка задается в процентах. Например 5%.  
+
+const cpu = {
+    'producer': 'AMD',
+    'amount': 250.00,
+    'family': 'AMD Ryzen 7',
+    'name': 'Ryzen 7 3700X',
+    'image': '',
+}
+
+let memory = {
+    'memory': 2048,
+    __proto__: cpu
+}
+
+memory.producer = 'Hynix';
+memory.amount =  60;
+memory.name = 'Hynix DDR4-2666';
+memory.family = 'DDR4';
+
+cpu.image = 'https://i2.rozetka.ua/goods/1865699/copy_amd_fx_series_fx_9590_fd9590fhhkwof_58abf05e14fdc_58abfc46c2b65_58abff06c94bd_images_1865699744.jpg';
+memory.image = 'https://i2.rozetka.ua/goods/17090881/189441988_images_17090881613.jpg';
+
+console.log(cpu);
+console.log(memory);
