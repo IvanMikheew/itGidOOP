@@ -11,7 +11,7 @@ class Button {
         btn.style.width = `${this.width}px`;
         btn.style.height = `${this.height}px`;
         btn.style.background = this.background;
-        btn.style.value = this.value;
+        btn.append(document.createTextNode(this.value));
         return btn
     }
 }
